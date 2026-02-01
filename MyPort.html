@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professional Portfolio — T E K H R I S</title>
+  <meta name="description" content="Professional portfolio showcasing projects, skills, and contact." />
+
+  <!-- Fallback system font stack for performance -->
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.04);
+      --radius:12px;
+      --container:1100px;
+      color-scheme: dark;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#07101a 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:60px;
+    }
+
+    .container{max-width:var(--container);margin:0 auto;padding:32px;}
+
+    header{
+      position:sticky;top:0;backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(11,18,27,0.6), rgba(11,18,27,0.28));
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      z-index:50;
+    }
+
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{height:44px;width:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4fd1c5);display:inline-grid;place-items:center;color:#07101a;font-weight:800}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .hero-left h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px}
+    .hero-left p{color:var(--muted);margin:0 0 20px}
+    .cta-row{display:flex;gap:12px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#07101a;font-weight:700;text-decoration:none}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .hero-right{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px;padding:18px;border:1px solid rgba(255,255,255,0.04)}
+    .profile{display:flex;gap:16px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,var(--accent),#4fd1c5);display:grid;place-items:center;font-weight:800;color:#07101a}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* Projects */
+    .section{margin-top:44px}
+    .section h2{margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;background:var(--glass);border-radius:8px;color:var(--muted)}
+
+    /* Skills */
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start}
+    form{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px}
+
+    footer{margin-top:44px;padding:28px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:620px){
+      nav a{display:none}
+      .grid{grid-template-columns:1fr}
+      .container{padding:18px}
+      .avatar{width:68px;height:68px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{display:grid;place-items:center}
+    .shadow{box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">TK</div>
+          <div>
+            <div style="font-size:14px">TEKHRIS</div>
+            <div style="font-size:12px;color:var(--muted)">Crypto / Web3 Content Creator · Frontend Engineer</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hi — I'm <span style="color:var(--accent)">TEKHRIS</span>. I build elegant products and delightful experiences.</h1>
+        <p class="muted">I help Web3 founders ship production-ready dApps that are fast, secure, and easy to use.
+
+          I specialize in product-focused frontend engineering, translating complex on-chain logic into simple, accessible user experiences. I care deeply about performance, scalability, and clean architecture, because good UX is critical for adoption.
+
+        Open to freelance, contract, and full-time roles with Web3 protocols.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Hire me</a>
+          <a class="btn secondary" href="#projects">View work</a>
+        </div>
+
+        <div class="section" id="about">
+          <h2>About me</h2>
+          <p class="muted">I'm a UX-focused frontend developer with 3 years experience building responsive web apps. I love translating user needs into polished interfaces and shipping reliable, maintainable code.</p>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="profile">
+          <div class="avatar">TK</div>
+          <div>
+            <div style="font-weight:700">Ezekwe Testimony</div>
+            <div class="small">Frontend Engineer • Lagos, Nigeria</div>
+            <div style="margin-top:10px" class="small muted">Available for remote & hybrid work — open to new opportunities.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="small muted">Contact</div>
+          <div style="margin-top:6px">
+            <div class="small">Email: <a href="mailto:hello@example" class="muted">testimonyezekwe@gmail.com</a></div>
+            <div class="small">Phone: <span class="muted">+234 7032596338</span></div>
+            <div style="margin-top:12px"><a class="btn" href="#contact">Say hello</a></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Selected projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project Alpha</h3>
+          <p class="muted">A short one-line description explaining the project's purpose and impact.</p>
+          <div style="margin-top:12px" class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Design System</span>
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Role: Lead frontend • Timeline: 3 months</div>
+        </article>
+ 
+        <article class="card">
+          <h3>Project Beta</h3>
+          <p class="muted">Mobile-first SaaS dashboard with realtime data visualizations.</p>
+          <div style="margin-top:12px" class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">D3</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Role: Frontend Engineer • Timeline: 2 months</div>
+        </article>
+
+        <article class="card">
+          <h3>Project Gamma</h3>
+          <p class="muted">E-commerce redesign that increased conversions and reduced bounce rate.</p>
+          <div style="margin-top:12px" class="tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">Performance</span>
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Role: Product Engineer • Timeline: 4 months</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML &amp; CSS</div>
+        <div class="skill">JavaScript / TypeScript</div>
+        <div class="skill">React / Next.js</div>
+        <div class="skill">Design Systems</div>
+        <div class="skill">Product Design</div>
+        <div class="skill">Testing &amp; CI</div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form onsubmit="handleSubmit(event)">
+          <label for="name">Name</label>
+          <input id="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@company.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+            <button type="submit" class="btn">Send message</button>
+            <div class="muted" style="font-size:13px">Prefer email? <a href="mailto:hello@example.com" class="muted">hello@example.com</a></div>
+          </div>
+        </form>
+
+        <aside class="card">
+          <h3>Availability & Rates</h3>
+          <p class="muted">Open to contract and full-time work. Typical engagements run from 2–6 months. Rates vary by scope — happy to discuss.</p>
+
+          <h3 style="margin-top:12px">Connect</h3>
+          <div class="muted">LinkedIn • GitHub • Dribbble</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Your Name — Built with care. · <a href="#" class="muted">Privacy</a></div>
+    </footer>
+  </main>
+
+  <script>
+    // Small interactive bits: year injection and simple form handling stub.
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email||!message) return alert('Please complete the form.');
+      // Replace with your form backend endpoint (Netlify, Formspree, your API, etc.)
+      alert('Thanks '+name+' — your message was "sent" (demo). Replace the stub with your backend endpoint.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
